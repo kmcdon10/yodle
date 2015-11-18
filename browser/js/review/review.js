@@ -31,7 +31,7 @@ app.controller('ReviewController', function ($scope, reviewList, ratingSpread, R
 	$scope.sortByStars = function(num){
 		if (num) {
 			$scope.reviews = reviewList.filter(function(post) {
-				return post.rating === num;
+				return Math.floor(post.rating) === num;
 			});
 		} else {
 			$scope.reviews = reviewList;
