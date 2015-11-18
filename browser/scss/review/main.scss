@@ -57,4 +57,26 @@
 	}
 }
 
+.filled {
+	color:#e9ce18;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.unfilled {
+	color: #d3d3d3;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.star {
+	display: inline-block;
+	width:15px ;
+	white-space: nowrap;
+}
+
+
 

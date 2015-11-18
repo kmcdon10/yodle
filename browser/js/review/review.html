@@ -5,9 +5,9 @@
             <div id="header">{{reviews.length}} Customer Reviews</div>
             <div id="subsection">
                 <span style="position: relative;">
-                    <div class="star-box" style="display: inline-block;width:15px ;white-space: nowrap;">
-                        <span class="unfilled" style="color:#d3d3d3; position: absolute;top: 0;left: 0;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        <span class="filled" ng-style="{width: ({{findAverage()}}/5) * 70}" style="color:#e9ce18; white-space: nowrap; overflow: hidden;position: absolute;top: 0;left: 0;width:22.8px">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <div class="star">
+                        <span class="unfilled">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span class="filled" ng-style="{width: ({{findAverage()}}/5) * 70}">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                     </div>
                 </span>
                 <div>{{findAverage()}} Average</div>
@@ -33,9 +33,9 @@
             <div class="post">
 
                 <span style="position: relative;">
-                    <div class="star-box" style="display: inline-block;width:15px ;white-space: nowrap;">
-                        <span class="unfilled" style="color:#d3d3d3; position: absolute;top: 0;left: 0;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        <span class="filled" ng-style="{width: (review.rating/5) * 70}" style="color:#e9ce18; white-space: nowrap; overflow: hidden;position: absolute;top: 0;left: 0;width:22.8px">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <div class="star">
+                        <span class="unfilled">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span class="filled" ng-style="{width: (review.rating/5) * 70}">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                     </div>
                 </span>
                 <div id="date">November 12, 2014</div>
