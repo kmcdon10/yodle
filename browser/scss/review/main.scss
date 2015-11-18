@@ -1,0 +1,62 @@
+
+.flex {
+	display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  width: 62%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  border-radius: 5%;
+
+	.post {
+	  width: 100%;
+	  margin: 0x 0px 0px 0px;
+	  border: 1px solid grey;
+	  padding: 7px 10px 7px 10px;
+	}
+
+
+  #date {
+    font-style: italic;
+  }
+  #title {
+   font-weight: bold;
+  }
+  #link {
+  	position: relative;
+  	float: right;
+  	float: bottom;
+  }
+}
+
+.panel {
+	border: 1px solid grey;
+	float: right;
+	float: top;
+	width: 28%;
+	font-weight: bold;
+	
+	#subsection {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	}
+
+	#header {
+		background: grey;
+		color: white;
+		overflow:hidden;
+		padding-left: 5px;
+	}
+	#starDist {
+		font-weight: normal;
+	}
+	a {
+		font-weight: normal;
+	}
+}
+
+

@@ -1,0 +1,47 @@
+<a ui-sref="home">Launchpad</a> &#8226 Reviews
+<section id="reviews" ng-conroller="ReviewController">
+    <h1>Reviews</h1>
+        <div class="panel">
+            <div id="header">{{reviews.length}} Customer Reviews</div>
+            <div id="subsection">
+                <span style="position: relative;">
+                    <div class="star-box" style="display: inline-block;width:15px ;white-space: nowrap;">
+                        <span class="unfilled" style="color:#d3d3d3; position: absolute;top: 0;left: 0;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span class="filled" ng-style="{width: ({{findAverage()}}/5) * 70}" style="color:#e9ce18; white-space: nowrap; overflow: hidden;position: absolute;top: 0;left: 0;width:22.8px">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                </span>
+                <div>{{findAverage()}} Average</div>
+            </div>
+            <canvas id="starDistChart" width="200" height="200"></canvas>
+            <div id="subsection">
+                <div>Filter by website</div>
+                <a>yelp</a>
+            </div>
+            <div id="subsection">
+            <div>Filter by number of stars</div>
+                <div ng-repeat="starRating in [1,2,3,4,5]" ng-model="sortRating">
+                    <a href ng-click="sortByStars(starRating)">{{starRating}}
+                    stars </a> <span id="starDist">({{ratingSpread[starRating-1]}})</span>
+                </div>
+            </div>
+            <div id="subsection">
+            <a ng-click="sortByStars()">Show all reviews</a>
+            </div>
+        </div>
+
+        <div class="flex" ng-repeat="review in reviews | orderBy:'-rating'">
+            <div class="post">
+
+                <span style="position: relative;">
+                    <div class="star-box" style="display: inline-block;width:15px ;white-space: nowrap;">
+                        <span class="unfilled" style="color:#d3d3d3; position: absolute;top: 0;left: 0;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span class="filled" ng-style="{width: (review.rating/5) * 70}" style="color:#e9ce18; white-space: nowrap; overflow: hidden;position: absolute;top: 0;left: 0;width:22.8px">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                </span>
+                <div id="date">November 12, 2014</div>
+                <div id="title">{{review.title}}</div>
+                <div>{{review.description}}</div>
+                <a id="link">-qa</a>
+            </div>
+        </div>
+</section>
